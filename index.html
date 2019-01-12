@@ -13,6 +13,8 @@
 <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+<!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
 
     <title>Train Schedule</title>
 </head>
@@ -28,7 +30,24 @@
         Current Train Schedule
     </div>
 
-        <div class="row">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency (min)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Until Arrival</th>
+          </tr>
+        </thead>
+        <tbody id="addTrainHere">
+        </tbody>
+      </table>
+  
+
+<!--  Horrible waste of time        
+    
+    <div class="row">
             <div id="name" class="col">
                 Train Name
             </div>
@@ -47,7 +66,7 @@
         </div>
         </div>
             <br>
-            <br>
+            <br>   -->
 
     <div class="container-fluid">
         <div class="row" id="addTrainHeader">
@@ -55,43 +74,28 @@
         </div>
         <form>
             <div class="form-group">
-              <label for="exampleInputEmail1">Train Name</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="trainName">Train Name</label>
+              <input class="form-control" id="trainName">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Destination</label>
-              <input type="password" class="form-control" id="trainName">
+              <label for="destination">Destination</label>
+              <input class="form-control" id="destination">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">First Train Time (Military Time)</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="firstTrain">First Train Time (Military Time)</label>
+                <input class="form-control" id="firstTrain">
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Frequency (min)</label>
-                <input type="password" class="form-control" id="trainName">
+                <label for="frequency">Frequency (min)</label>
+                <input class="form-control" id="frequency">
               </div>
   
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
           </form>
     </div>
      
-
-        
-
-        
-<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDeeUfzIuiC2mcdPB2YgbFUlImR5SYhJh4",
-    authDomain: "train-activity-95f2d.firebaseapp.com",
-    databaseURL: "https://train-activity-95f2d.firebaseio.com",
-    projectId: "train-activity-95f2d",
-    storageBucket: "train-activity-95f2d.appspot.com",
-    messagingSenderId: "759991554204"
-  };
-  firebase.initializeApp(config);
-</script>
+<!--Moment-->
+<script src="https://unpkg.com/moment"></script>
 
 </body>
 </html>
