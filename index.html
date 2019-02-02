@@ -20,29 +20,19 @@
 </head>
 
 <body>
-
     <header id="trPic">
-
         <div class="container">
             <div class="mainHead">
-
                 <div>
                 <h1>Train Schedule</h1>
                 <p>Please Add Trains To Our Interactive Train Schedule.</p>
                 </div>
-
-                <!-- <button id="trBtn">
-                    <i class="fas fa-train"></i>
-                </button> -->
-                
             </div>
         </div>
-
     </header>
 
     <section>
         <div class="container">
-            
             <div id="trTable">
                 <table id="trainSched">
                     <thead>
@@ -51,112 +41,49 @@
                             <td class="trDest">Destination</td>
                             <td class="trFreq">Frequency (min)</td>
                             <td class="trNext">Arrival Time</td>
-                            
                         </tr>
                     </thead>
-                    <tbody id="tbod">
-                    </tbody>
+<!--Appending the whole table body to tbod below-->
+                    <tbody id="tbod"></tbody>
                 </table>
             </div>
 
-            <!-- <div id="myModal" class="modal">
 
-                <div class="modal-content">
-
-                    <div class="modal-header">
-
-                        <span class="close">
-                            <i class="fas fa-times"></i>
-                        </span>
-
-                        <h2>Add a Train</h2>
-
-                    </div>
-                    
-                    <div class="modal-body">
-            
-                        <form>
-                            <div class="formField">
-                                <label for="trName">
-                                    Train Name
-                                </label>
-                                <input type="text" id="trName">
-                            </div>
-                            <div class="formField">
-                                <label for="trDest">
-                                    Destination
-                                </label>
-                                <input type="text" id="trDest" id="trDest">
-                            </div>
-                            <div class="formField">
-                                <label for="trFirst">
-                                    First Train Departure Time
-                                </label>
-                                <input type="time" id="trFirst" id="trFirst">
-                            </div>
-                            <div class="formField">
-                                <label for="trFreq">
-                                    Frequency
-                                </label>
-                                <input type="number" id="trFreq" id="trFreq" min="0" placeholder="Time in minutes">
-                            </div>
- -->
-
- <div class="container-fluid">
-    <div class="addTrainHeader" id="addTrainHeader">
-            Add a Train Below
-    </div>
-    <form>
-        <div class="formField">
-          <label for="trName">Train Name</label>
-          <input class="form-control" id="trName">
-        </div>
-        <div class="formField">
-          <label for="trDest">Destination</label>
-          <input class="form-control" id="trDest">
-        </div>
-        <div class="formField">
-            <label for="trFirst">First Train Time (Military Time)</label>
-            <input class="form-control" id="trFirst">
-          </div>
-          <div class="formField">
-            <label for="trFreq">Frequency (min)</label>
-            <input class="form-control" id="trFreq">
-
-           <div class="form-buttons">
-            <button class="formBtn" id="submitBtn">
-                Submit
-            </button>
-            <button class="formBtn" type="reset">
-                Reset
-            </button>
+            <div class="container-fluid">
+                <div class="addTrainHeader" id="addTrainHeader">
+                    Add a Train Below
             </div>
-        </form>
+            <form>
+                <div class="formField">
+                    <label for="trName">Train Name</label>
+                <input class="form-control" id="trName">
+                </div>
+                <div class="formField">
+                    <label for="trDest">Destination</label>
+                    <input class="form-control" id="trDest">
+                </div>
+                <div class="formField">
+                    <label for="trFirst">First Train Time (Military Time)</label>
+                    <input class="form-control" id="trFirst">
+                </div>
+                    <div class="formField">
+                    <label for="trFreq">Frequency (min)</label>
+                    <input class="form-control" id="trFreq">
+                </div>
 
-          </div>
+                <div class="form-buttons">
+                    <button class="formBtn" id="submitBtn">
+                        Submit
+                    </button>
 
+                    <button class="formBtn" type="reset">
+                        Reset
+                    </button>
+                </div>
+            </form>
 
-
-                            <!-- <div class="form-buttons">
-
-                                <button class="formBtn" id="submitBtn">
-                                    Add Train
-                                </button>
-
-                                <button class="formBtn" type="reset">
-                                    Reset
-                                </button>
-
-                            </div> -->
-
+        </div>
                         
-
-                    </div>
-
-            </div>
-        
-        </div>
-
     </section>
 
 <!-- JAVASCRIPT -->
