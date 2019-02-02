@@ -80,9 +80,9 @@ $(document).ready(function() {
         var newRow = $('<tr>').append(
             $('<td>').text(trainName),
             $('<td>').text(trainDest),
-            $('<td class="centered">').text('every ' + trainFreq + ' mins'),
+            $('<td class="centered">').text('every ' + trainFreq + ' minutes'),
             $('<td class="centered">').text(moment(nextArrival).format('hh:mm a')),
-            $('<td class="centered">').text(minutesAway + ' mins away')        
+            $('<td class="centered">').text(minutesAway + ' minutes')        
         );
 
         // add new train row to table body

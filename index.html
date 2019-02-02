@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Train Schedule</title>
-
-
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -41,6 +39,7 @@
                             <td class="trDest">Destination</td>
                             <td class="trFreq">Frequency (min)</td>
                             <td class="trNext">Arrival Time</td>
+                            <td class="trNext">Next Train Arrives In:</td>
                         </tr>
                     </thead>
 <!--Appending the whole table body to tbod below-->
@@ -56,15 +55,15 @@
             <form>
                 <div class="formField">
                     <label for="trName">Train Name</label>
-                <input class="form-control" id="trName">
+                <input class="form-control" id="trName" validate="alpha">
                 </div>
                 <div class="formField">
                     <label for="trDest">Destination</label>
                     <input class="form-control" id="trDest">
                 </div>
                 <div class="formField">
-                    <label for="trFirst">First Train Time (Military Time)</label>
-                    <input class="form-control" id="trFirst">
+                    <label for="trFirst">First Train Time</label>
+                    <input type="time" class="form-control" id="trFirst">
                 </div>
                     <div class="formField">
                     <label for="trFreq">Frequency (min)</label>
