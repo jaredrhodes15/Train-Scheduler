@@ -1,0 +1,210 @@
+/*
+==============================
+BASIC SETUP
+==============================
+*/
+
+body, button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+::selection {
+    background: #333;
+    color: #fff;
+}
+
+/*
+==============================
+HEADER
+==============================
+*/
+
+header {
+    background-image: URL("../images/tracks.jpg");
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .9;
+    
+}
+
+header > .container {
+    position: relative;
+    height: 300px;
+}
+
+.mainHead {
+    /* position: absolute; */
+    /* bottom: 30px; */
+    height: 250px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-gap: 18px;
+    align-items: center;
+    opacity: 1;
+}
+
+h1 {
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 3em;
+    padding-bottom: 8px;
+}
+
+/*
+==============================
+SECTION
+==============================
+*/
+
+.grid {
+    display: grid;
+    grid-gap: 15px;
+}
+
+#trTable {
+    overflow-x: auto;
+}
+
+/*
+==============================
+TABLES
+==============================
+*/
+
+table {
+    width: 100%;
+}
+
+#trTable::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.trName {
+    min-width: 163px;
+}
+
+.trDest {
+    min-width: 163px;
+}
+
+.trFreq {
+    min-width: 125px;
+    text-align: center;
+}
+
+.trNext {
+    min-width: 138px;
+    text-align: center;
+}
+
+.trAway {
+    min-width: 138px;
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
+}
+
+td {
+    border: 1px solid #333;
+    padding: 10px 15px;
+    vertical-align: middle;
+}
+
+thead td {
+    font-weight: bold;
+    vertical-align: middle;
+    background: #333;
+    color: #fff;
+}
+
+tbody td {
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: -0.01em;
+}
+
+
+
+
+
+
+#trBtn {
+    font-size: 16px;
+    height: 50px;
+    width: 50px;
+    margin-right: 40px;
+    border-radius: 25px;
+    border: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 0px 5px 5px rgb(0,0,0, 0.8);
+}
+
+#trBtn:hover {
+    box-shadow: none;
+}
+
+/*
+==============================
+FORM
+==============================
+*/
+
+#addTrainHeader {
+    margin-top: 10px;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+form {
+    margin: 15px 0;
+}
+
+.formField {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    padding-bottom: 10px;
+}
+
+input {
+    font-family: 'Inconsolata', monospace;
+    padding: 5px;
+    width: 100%;
+    min-height: 34px;
+}
+
+.form-buttons {
+    text-align: center;
+    padding-top: 8px;
+}
+
+.formBtn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+}
+
+.formBtn:hover {
+    filter: brightness(0.5);
+    transition: 0.75s all;
+}

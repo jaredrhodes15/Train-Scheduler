@@ -4,98 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!--CSS-->
-    <link rel="stylesheet" href="style.css">
-<!--Javascript-->
-    <script src="app.js"></script>
-<!--Jquery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-<!--Firebase-->
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
 
     <title>Train Schedule</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+
 </head>
+
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Train Schedule</h1>
-        <p class="lead">Use the tables below to see when the most convenient </p>
-        <hr class="my-4">
-        </p>
-    </div>
-    <div class="container-fluid">
-    <div id="scheduleHeader" class="row">
-        Current Train Schedule
-    </div>
 
-    <table class="table">
-        <thead>
-          <tr>
-            <th>Train Name</th>
-            <th>Destination</th>
-            <th>Frequency (min)</th>
-            <th>Next Arrival</th>
-            <th>Minutes Until Arrival</th>
-          </tr>
-        </thead>
-        <tbody id="addTrainHere">
-        </tbody>
-      </table>
-  
+    <header id="trPic">
 
-<!--  Horrible waste of time        
-    
-    <div class="row">
-            <div id="name" class="col">
-                Train Name
-            </div>
-            <div id="destination" class="col">
-                Destination
-            </div>
-            <div id="time" class="col">
-                Frequency (min)
-            </div>
-            <div id="frequency" class="col">
-                Next Arrival
-            </div>
-            <div class="col">
-                Minutes Away
+        <div class="container">
+            <div class="mainHead">
+
+                <div>
+                <h1>Train Schedule</h1>
+                <p>Please Add Trains To Our Interactive Train Schedule.</p>
+                </div>
+
+                <!-- <button id="trBtn">
+                    <i class="fas fa-train"></i>
+                </button> -->
+                
             </div>
         </div>
-        </div>
-            <br>
-            <br>   -->
 
-    <div class="container-fluid">
-        <div class="row" id="addTrainHeader">
-                Add a Train
-        </div>
-        <form>
-            <div class="form-group">
-              <label for="trainName">Train Name</label>
-              <input class="form-control" id="trainName">
+    </header>
+
+    <section>
+        <div class="container">
+            
+            <div id="trTable">
+                <table id="trainSched">
+                    <thead>
+                        <tr>
+                            <td class="trName">Train Name</td>
+                            <td class="trDest">Destination</td>
+                            <td class="trFreq">Frequency (min)</td>
+                            <td class="trNext">Arrival Time</td>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="tbod">
+                    </tbody>
+                </table>
             </div>
-            <div class="form-group">
-              <label for="destination">Destination</label>
-              <input class="form-control" id="destination">
-            </div>
-            <div class="form-group">
-                <label for="firstTrain">First Train Time (Military Time)</label>
-                <input class="form-control" id="firstTrain">
-              </div>
-              <div class="form-group">
-                <label for="frequency">Frequency (min)</label>
-                <input class="form-control" id="frequency">
-              </div>
-  
-            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-          </form>
+
+            <!-- <div id="myModal" class="modal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <span class="close">
+                            <i class="fas fa-times"></i>
+                        </span>
+
+                        <h2>Add a Train</h2>
+
+                    </div>
+                    
+                    <div class="modal-body">
+            
+                        <form>
+                            <div class="formField">
+                                <label for="trName">
+                                    Train Name
+                                </label>
+                                <input type="text" id="trName">
+                            </div>
+                            <div class="formField">
+                                <label for="trDest">
+                                    Destination
+                                </label>
+                                <input type="text" id="trDest" id="trDest">
+                            </div>
+                            <div class="formField">
+                                <label for="trFirst">
+                                    First Train Departure Time
+                                </label>
+                                <input type="time" id="trFirst" id="trFirst">
+                            </div>
+                            <div class="formField">
+                                <label for="trFreq">
+                                    Frequency
+                                </label>
+                                <input type="number" id="trFreq" id="trFreq" min="0" placeholder="Time in minutes">
+                            </div>
+ -->
+
+ <div class="container-fluid">
+    <div class="addTrainHeader" id="addTrainHeader">
+            Add a Train Below
     </div>
-     
-<!--Moment-->
-<script src="https://unpkg.com/moment"></script>
+    <form>
+        <div class="formField">
+          <label for="trName">Train Name</label>
+          <input class="form-control" id="trName">
+        </div>
+        <div class="formField">
+          <label for="trDest">Destination</label>
+          <input class="form-control" id="trDest">
+        </div>
+        <div class="formField">
+            <label for="trFirst">First Train Time (Military Time)</label>
+            <input class="form-control" id="trFirst">
+          </div>
+          <div class="formField">
+            <label for="trFreq">Frequency (min)</label>
+            <input class="form-control" id="trFreq">
+
+           <div class="form-buttons">
+            <button class="formBtn" id="submitBtn">
+                Submit
+            </button>
+            <button class="formBtn" type="reset">
+                Reset
+            </button>
+            </div>
+        </form>
+
+          </div>
+
+
+
+                            <!-- <div class="form-buttons">
+
+                                <button class="formBtn" id="submitBtn">
+                                    Add Train
+                                </button>
+
+                                <button class="formBtn" type="reset">
+                                    Reset
+                                </button>
+
+                            </div> -->
+
+                        
+
+                    </div>
+
+            </div>
+        
+        </div>
+
+    </section>
+
+<!-- JAVASCRIPT -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+<script src="assets/javascript/script.js"></script>
 
 </body>
 </html>
